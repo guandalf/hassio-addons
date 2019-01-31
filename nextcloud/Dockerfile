@@ -23,8 +23,8 @@ ARG BUILD_ARCH
 # && sed -i "s|/var/www/html|/data/www/html|g" /entrypoint.sh \
 # && sed -i "s|/var/www/html|/data/www/html|g" /usr/src/nextcloud/config/autoconfig.php
 
-#COPY run_addon.sh /
-#RUN chmod a+x /run_addon.sh
+COPY run_addon.sh /
+RUN chmod a+x /run_addon.sh
 
-#ENTRYPOINT [ "/run_addon.sh" ]
+ENTRYPOINT [ "/run_addon.sh" ]
 #CMD ["apache2-foreground"]
