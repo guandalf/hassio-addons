@@ -7,6 +7,12 @@ if [ ! -d "${HTML_DIR}" ]; then
     chown -R www-data:root "${HTML_DIR}"
     chmod -R g=u "${HTML_DIR}"
 fi
+DB_DIR=/data/www/html
+if [ ! -d "${DB_DIR}" ]; then
+    mkdir -p "${DB_DIR}" 
+    chown -R www-data:root "${DB_DIR}"
+    chmod -R g=u "${DB_DIR}"
+fi
 SHARE_DIR=/share/nextcloud
 if [ ! -d "${SHARE_DIR}" ]; then
     mkdir -p "${SHARE_DIR}" 
