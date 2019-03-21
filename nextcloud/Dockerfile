@@ -23,6 +23,9 @@ ARG BUILD_ARCH
 # && sed -i "s|/var/www/html|/data/www/html|g" /entrypoint.sh \
 # && sed -i "s|/var/www/html|/data/www/html|g" /usr/src/nextcloud/config/autoconfig.php
 
+COPY run-parts.sh /
+RUN chmod a+x /run-parts.sh
+
 COPY run_addon.sh /
 RUN chmod a+x /run_addon.sh
 
