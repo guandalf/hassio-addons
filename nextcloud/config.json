@@ -6,7 +6,7 @@
     "url": "https://github.com/guandalf/hassio-addons/tree/master/nextcloud",
     "startup": "system",
     "boot": "auto",
-    "ports": {"80/tcp": 6080, "443/tcp": 6443, "4443/tcp": 64443},
+    "ports": {"80/tcp": 80, "443/tcp": 443, "4443/tcp": 64443},
     "environment": {},
     "map": ["share:rw"],
     "options": {"env_var": [{"name": "NEXTCLOUD_DATA_DIR", "value": "/share/nextcloud/"}]},
