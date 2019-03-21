@@ -1,6 +1,6 @@
 {
     "name": "NextcloudPi",
-    "version": "15.0.5",
+    "version": "1.10.4",
     "slug": "nextcloudpi",
     "description": "Nextcloud addon. Image based on upstream docker images. This is just a wrapper to pass environment variable to the container.",
     "url": "https://github.com/guandalf/hassio-addons/tree/master/nextcloud",
@@ -9,6 +9,16 @@
     "ports": {"80/tcp": 80, "443/tcp": 443, "4443/tcp": 64443},
     "environment": {},
     "map": ["share:rw"],
-    "options": {"env_var": [{"name": "NEXTCLOUD_DATA_DIR", "value": "/share/nextcloud/"}]},
-    "schema": {"env_var":[{"name": "str", "value": "str"}]}
+    "options": {
+        "env_var": [
+            {"name": "NEXTCLOUD_DATA_DIR", "value": "/share/nextcloud/"},
+            {"name": "DOMAIN", "value": "notused.yet"}
+        ]
+    },
+    "schema": {
+        "env_var": [
+            {"name": "str", "value": "str"},
+            {"name": "str", "value": "str"}
+        ]
+    }
 }
