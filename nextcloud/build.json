@@ -1,5 +1,6 @@
 {
   "build_from": {
-    "armhf" : "ownyourbits/nextcloudpi-armhf:latest"
+    "armhf" : "ownyourbits/nextcloudpi-armhf:latest",
+    "armv7" : "ownyourbits/nextcloudpi-armhf:latest"
   }
 }
