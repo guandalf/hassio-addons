@@ -1,10 +1,14 @@
 sudo: required
 services:
-  - docker
+- docker
 before_install:
-  - sudo apt-get install jq
+- sudo apt-get install jq
 env:
+  matrix:
   - ADDON="nextcloudpi"
+  global:
+  - secure: ZwBueGZ8snx+1H9hp/tsfpI1L2+NhAjq2zJKSh+q47zBZNtbVWJMX7vZ2Vz44DDfVqmRSMjDaExs7xpoeR97mWq/btGRTOf903C5XpJKDR5s7XQ2MO7WzzP0Y1ibA5ppOQm1b7JS5hiHebwUuhpxGooXOeULSJ26z+DXWClcCWZzZe6pn5bPfOjKejXiGHnO6JSZb7pWktA9egFVp2FZAT8qmv40XRZBDCbbrkaKIe/p0mI5ifX2G9puZakl0IgKMxCq+83PFj1eX4WIKDnllajMuFVOP3woRGvhiNYSwyapwZ/y+mJYc5genVLDyUqQWI0KhytmpELlcFH/EkhKwsU7U225pIZdjZBgQHAO1OzpIEWDpiWioKUpoGf9lES7MUfzbGEA4kYUZwUOKS8opo2y9pst/J5gCXk2l030noV8mmOWcduWfPf4KfXGi47ZVdvjFQvSm/0FdeZmVJD3iWFDxdu1B4hdADyumtHUp6xqJw4XvYNEs3RqgqmrrRGFI7Gep4NoftbqrslexANSayoiuLaX6BzOOsNafwPbYLXKFUqaFkI2a7gLyQHMuldXdju0DLQy0d+sIfx9WGnvkg5cKLJGF+Myi3B5iMI/kf5ZymU16506s56dGfFo03moHtQfQsfUytBgRLqtD1UDsVHUWtbajKhh3VQAONB2yRM=
+  - secure: AqIgaEBK/exZ1LfHKR/erzqhrwKQ49OTWcRr9mQFJL1f/wnXx55C6LX0K+3iZeAdI7HWhom+KfpHdO7oSMoLcK4OgnlloRDwygGKAIcqHjlKUH28OFWzl65L46zhXyyhyyVuo4PFCh81AVNOs7m+KwjX7yTkSu+pP90Q3BUSoLOQpx+zJ8SLco0xlOCwdNFMTRGa4EvqtdjpoDTf+cDOYl48fLFSj1NrDv/CPSwppFuJJTDZevp6omlJEfYu0M4Ic5daSd1bhWhHZag8xnQ1z+ONiINbSkU6+KsKFSwZZeN9R+g5Wn/qFqegTzfO5m3+0Vxo6Mfx/6l0oRglEcbxCuNOrtSwu7Mto47li7kXMJDc3wf9aoqeO0Ua0C4N7CqolnW4V7wRgT+O86qHy7jLZJoXe+z4JDNB+yom3qbttlpm/o11wDlDSV9nay3O7K/WBjGXmx0teBbokhzD2oTaxkwYLsK3FLh+SBn7O0hR6txetJUcYHyJUwessw63DJQOZxF6KGXQFl4FE8KXkaaRS7GdCjnsGZM8k3TCyOvsENXiSsPmqVJ8YZ3k4JDg9svF5tzu2fv+Cq6dIY059i47Gu0thqamTwwEFDomYqzFEDipWTKBE+MpPjMgXrWmOvvyt4AfqhjbeXytJyW8S8HYT71J+ZbP5+4EBk+VewXas20=
 script:
-  - docker login -u $DOCKER_USER -p $DOCKER_PASS
-  - ./build.sh $ADDON 
+- docker login -u $DOCKER_USER -p $DOCKER_PASS
+- "./build.sh $ADDON"
