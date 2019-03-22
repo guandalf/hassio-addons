@@ -1,6 +1,8 @@
 {
   "build_from": {
     "armhf" : "ownyourbits/nextcloudpi-armhf:latest",
-    "armv7" : "ownyourbits/nextcloudpi-armhf:latest"
+    "armv7" : "ownyourbits/nextcloudpi-armhf:latest",
+    "amd64" : "ownyourbits/nextcloudpi-x86:latest",
+    "i386" : "ownyourbits/nextcloudpi-x86:latest"
   }
 }
