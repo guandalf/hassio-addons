@@ -1,0 +1,7 @@
+---
+channel: stable
+addons:
+  tor:
+    repository: guandalf/addon-tor
+    target: tor
+    image: guandalf/tor-{arch}
