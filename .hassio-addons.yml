@@ -1,7 +1,7 @@
 ---
 channel: stable
 addons:
-  tor:
+  tor2:
     repository: guandalf/addon-tor
     target: tor
     image: guandalf/tor-{arch}
